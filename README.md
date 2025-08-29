@@ -1,5 +1,5 @@
-# Build a Modern Portfolio Website with React & TailwindCSS
-<h1>Built my Portfolio using this template provided by PedroTech.</h1>
+# <h1>Built my Portfolio using this template provided by PedroTech. </h1>
+<p>Below is the same Readme as on Pedro's GitHub repo.</p>
 <div align="center">
   <br />
   <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">
