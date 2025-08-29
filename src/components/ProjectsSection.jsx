@@ -3,30 +3,30 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
+    title: "Blogging Website",
+    description: "A blogging platform where users can create, publish, and explore blogs shared by others.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["React", "TailwindCSS", "Appwrite"],
+    demoUrl: "https://megablog.vercel.app",
+    githubUrl: "https://github.com/Raijin-cyber/MegaBlog",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Tru Weather",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "A single page application fetches real-time weather related info of a given location.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "tru-weather.vercel.app",
+    githubUrl: "https://github.com/Raijin-cyber/TruWeather",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Landing page of Amazon",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "A responsive clone of Amazon’s landing page, built with clean design and optimized for performance",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["React", "TailwindCSS"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -100,7 +100,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/Raijin-cyber"
           >
             Check My Github <ArrowRight size={16} />
           </a>

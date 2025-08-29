@@ -10,11 +10,34 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 
 export const ContactSection = () => {
   const { toast } = useToast();
+  const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sendMessage = (e) => {
+
+    e.preventDefault();
+
+    emailjs.
+      sendForm(
+        "service_fskqd4c",
+        "template_cpkqv8e",
+        form.current,
+        "isThFFpV9d10KWDGr",
+      )
+      // .then(
+      //   (result) => {
+      //     console.log("Message Sent! ", result);
+      //   },
+      //   (error) => {
+      //     alert("Something Went Wrong! ", error);
+      //   }
+      // )
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,10 +79,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:ujjwalsharma2562005@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gmail.com
+                    ujjwalsharma2562005@gmail.com
                   </a>
                 </div>
               </div>
@@ -70,10 +93,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Phone</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+918881629983"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    +91 (888) 162-9983
                   </a>
                 </div>
               </div>
@@ -84,7 +107,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
+                    Lucknow, Uttar Pradesh, India
                   </a>
                 </div>
               </div>
@@ -93,18 +116,18 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/ujjwal-sharma-518039301" target="_blank">
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://x.com/raijinsigma" target="_blank">
                   <Twitter />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/ujjwal_sharma2506" target="_blank">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank">
+                {/* <a href="#" target="_blank">
                   <Twitch />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -115,7 +138,7 @@ export const ContactSection = () => {
           >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendMessage} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -130,7 +153,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder="Your Name"
                 />
               </div>
 
@@ -148,7 +171,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="example@gmail.com"
                 />
               </div>
 
