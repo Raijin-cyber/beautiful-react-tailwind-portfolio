@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -41,27 +42,32 @@ export const Navbar = () => {
         </a>
 
         {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
-            <a
-              key={key}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden md:flex space-x-8">
+            {navItems.map((item, key) => (
+              <a
+                key={key}
+                href={item.href}
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* mobile nav */}
-
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-        </button>
+        
+        <div className="grid grid-cols-2">
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="md:hidden p-2 text-foreground z-50"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+          </button>
+          <ThemeToggle />
+        </div>
 
         <div
           className={cn(
