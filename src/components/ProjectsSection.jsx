@@ -17,18 +17,18 @@ const projects = [
       "A single page application fetches real-time weather related info of a given location.",
     image: "/projects/project2.png",
     tags: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "tru-weather.vercel.app",
+    demoUrl: "https://tru-weather.vercel.app",
     githubUrl: "https://github.com/Raijin-cyber/TruWeather",
   },
   {
     id: 3,
-    title: "Landing page of Amazon",
+    title: "A Quote Generator",
     description:
-      "A responsive clone of Amazon’s landing page, built with clean design and optimized for performance",
+      "A responsive single page web app, show-casing basic API handling.",
     image: "/projects/project3.png",
-    tags: ["React", "TailwindCSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["React", "TailwindCSS", "TsParticles"],
+    demoUrl: "https://quotegenerator-three-henna.vercel.app",
+    githubUrl: "https://github.com/Raijin-cyber/apihub/tree/main/examples/public/quotes/web/react-vite-tailwind",
   },
 ];
 
