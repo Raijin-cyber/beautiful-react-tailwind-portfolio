@@ -30,6 +30,16 @@ const projects = [
     demoUrl: "https://quotegenerator-three-henna.vercel.app",
     githubUrl: "https://github.com/Raijin-cyber/apihub/tree/main/examples/public/quotes/web/react-vite-tailwind",
   },
+  {
+    id: 4,
+    title: "Plantera",
+    description:
+      "A social media platform for plants, built on top of Appwrite.",
+    image: "/projects/project4.png",
+    tags: ["React", "TailwindCSS", "Appwrite"],
+    demoUrl: "https://plantera.appwrite.network/about",
+    githubUrl: "https://github.com/Raijin-cyber/Plantera",
+  },
 ];
 
 export const ProjectsSection = () => {
