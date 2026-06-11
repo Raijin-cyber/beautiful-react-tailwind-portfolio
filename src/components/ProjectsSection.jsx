@@ -40,6 +40,16 @@ const projects = [
     demoUrl: "https://plantera.appwrite.network/about",
     githubUrl: "https://github.com/Raijin-cyber/Plantera",
   },
+  {
+    id: 5,
+    title: "Orbi",
+    description:
+      "ORBI – Connect beyond boundaries.",
+    image: "/projects/project5.png",
+    tags: ["React", "Node.js", "Express.js", "MongoDB"],
+    demoUrl: "https://orbi-beryl.vercel.app/",
+    githubUrl: "https://github.com/Raijin-cyber/Suno",
+  },
 ];
 
 export const ProjectsSection = () => {
